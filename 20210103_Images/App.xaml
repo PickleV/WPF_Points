@@ -1,0 +1,12 @@
+﻿<Application x:Class="_20210103_Images.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:_20210103_Images"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <BitmapImage x:Key="play_64_Black" UriSource="Resources\play_64_Black.png"></BitmapImage>
+            <BitmapImage x:Key="circle" UriSource="Resources\circle_64px.png"></BitmapImage>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

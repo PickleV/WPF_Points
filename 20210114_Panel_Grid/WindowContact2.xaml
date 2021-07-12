@@ -1,0 +1,26 @@
+﻿<Window x:Class="_20210114_Panel_Grid.WindowContact2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_20210114_Panel_Grid"
+        mc:Ignorable="d"
+        Title="WindowContact2" Height="400" Width="300">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label VerticalAlignment="Center" HorizontalAlignment="Right">Name:</Label>
+        <TextBox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" ></TextBox>
+        <Label Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right">E-mail:</Label>
+        <TextBox Name="tbEmail" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" ></TextBox>
+        <Label Grid.Column="0" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Right">Comments:</Label>
+        <TextBox Name="tbComment" Grid.Row="2" Grid.Column="2"></TextBox>
+    </Grid>
+</Window>

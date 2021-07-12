@@ -1,0 +1,18 @@
+﻿<Window x:Class="_20210114_UserControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_20210114_UserControl"
+        xmlns:uc="clr-namespace:_20210114_UserControl.UserControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <uc:ccText InputName="Test1:" InputMaxNum="100" Height="50"   VerticalAlignment="Top"></uc:ccText>
+        <uc:ccText Grid.Row="1" InputName="Test2:" InputMaxNum="100"  MinWidth="200"></uc:ccText>
+    </Grid>
+</Window>

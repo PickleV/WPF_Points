@@ -1,0 +1,23 @@
+﻿<Window x:Class="_20210411_Image.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_20210411_Image"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <WrapPanel>
+        <Image Source="https://upload.wikimedia.org/wikipedia/commons/3/30/Googlelogo.png" MaxHeight="100"></Image>
+        <Image Source="resources/play_64px.png" MaxHeight="100" Stretch="None"></Image>
+        <Image Source="resources/play_64_Black.png" MaxHeight="100" Stretch="Uniform"></Image>
+
+        <!--定义为全局资源文件后使用-->
+        <!--<Image Source="{StaticResource play_64_Black}" MaxHeight="100" Stretch="UniformToFill"></Image>
+        <Image Source="{StaticResource circle}" MaxHeight="100"></Image>-->
+
+        <Button Name="bLoad" Margin="10" MaxHeight="30" Click="bLoad_Click">加载图片</Button>
+        <Button Name="bDefault" Margin="10" MaxHeight="30" Click="bDefault_Click">默认图片</Button>
+        <Image Name="iPic1" Margin="10" MaxHeight="100"></Image>
+
+    </WrapPanel>
+</Window>

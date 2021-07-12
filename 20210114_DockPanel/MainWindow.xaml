@@ -1,0 +1,21 @@
+﻿<Window x:Class="_20210114_DockPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_20210114_DockPanel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <!--LastChildFill属性可以让最后的center不填充，默认最后一个是填充的。-->
+    <DockPanel LastChildFill="False">
+        <!--调整 Right left 到后面，可以让top bottom先占用整个顶和底-->
+        <!---->
+        <Button DockPanel.Dock="Top" MinHeight="50">button1</Button>
+        <Button DockPanel.Dock="Bottom" Height="50">button1</Button>
+        <Button DockPanel.Dock="Right" Width="30">button1</Button>
+        <Button DockPanel.Dock="Right" Width="30">button1</Button>
+        <Button DockPanel.Dock="Left" Width="150">button1</Button>
+        <!--最后一个自动中心最大化，不用设置-->
+        <Button>Center</Button>
+    </DockPanel>
+</Window>

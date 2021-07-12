@@ -1,0 +1,28 @@
+﻿<Window x:Class="_20210201_DialogBox.InputWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_20210201_DialogBox"
+        mc:Ignorable="d"
+        Title="Input Dialog" SizeToContent="WidthAndHeight">
+    <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image Grid.RowSpan="3" MinWidth="150" Source="Images\warning_easyicon.net.png"></Image>
+        <Label Grid.Row="0" Grid.Column="1">Please enter number:</Label>
+        <TextBox Grid.Row="1" Grid.Column="1" MinWidth="300"></TextBox>
+        <WrapPanel Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right">
+            <Button Margin="10" MinWidth="50" Click="Button_Click">OK</Button>
+            <Button Margin="10" MinWidth="50" Click="Button_Click_1">Cancel</Button>
+        </WrapPanel>
+
+    </Grid>
+</Window>
