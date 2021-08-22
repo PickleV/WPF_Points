@@ -1,0 +1,204 @@
+﻿<UserControl
+    x:Class="_20210815_MultiModuleDisplay.Views.ControlModlueStatus"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dxga="http://schemas.devexpress.com/winfx/2008/xaml/gauges"
+    xmlns:hc="https://handyorg.github.io/handycontrol"
+    xmlns:local="clr-namespace:_20210815_MultiModuleDisplay.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:_20210815_MultiModuleDisplay.ViewModel"
+    d:DesignHeight="700"
+    d:DesignWidth="900"
+    mc:Ignorable="d">
+    <Control.DataContext>
+        <vm:ModuleVIewModel />
+    </Control.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <hc:TransitioningContentControl Grid.Row="1" Grid.Column="1">
+            <ListBox
+                Margin="32"
+                BorderThickness="0"
+                ItemsSource="{Binding DataList}"
+                Style="{StaticResource WrapPanelHorizontalListBox}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <hc:Card
+                            MaxWidth="340"
+                            Margin="8"
+                            BorderThickness="0"
+                            Effect="{StaticResource EffectShadow2}"
+                            Footer="{Binding Title}">
+                            <Border CornerRadius="4,4,0,0" Style="{StaticResource BorderClip}">
+
+                                <StackPanel Margin="-20,0,-50,0" Orientation="Horizontal">
+                                    <dxga:LinearGaugeControl
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        Width="300"
+                                        Margin="10,0,10,0">
+                                        <dxga:LinearGaugeControl.ScalePanelTemplate>
+                                            <ItemsPanelTemplate>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition />
+                                                        <ColumnDefinition />
+                                                        <ColumnDefinition />
+                                                    </Grid.ColumnDefinitions>
+                                                </Grid>
+                                            </ItemsPanelTemplate>
+                                        </dxga:LinearGaugeControl.ScalePanelTemplate>
+
+                                        <dxga:LinearGaugeControl.Model>
+                                            <dxga:LinearRedThermometerModel />
+                                        </dxga:LinearGaugeControl.Model>
+
+                                        <!--  Temp 1  -->
+                                        <dxga:LinearScale
+                                            Grid.Column="0"
+                                            Margin="0,15,0,30"
+                                            EndValue="110"
+                                            MajorIntervalCount="12"
+                                            MinorIntervalCount="2"
+                                            StartValue="-10">
+                                            <dxga:LinearScale.Ranges>
+                                                <dxga:LinearScaleRange EndValue="0" StartValue="0%">
+                                                    <dxga:LinearScaleRange.Presentation>
+                                                        <dxga:DefaultLinearScaleRangePresentation Fill="#FF80B9FF" />
+                                                    </dxga:LinearScaleRange.Presentation>
+                                                </dxga:LinearScaleRange>
+                                                <dxga:LinearScaleRange EndValue="100%" StartValue="0" />
+                                            </dxga:LinearScale.Ranges>
+                                            <dxga:LinearScale.LevelBars>
+                                                <dxga:LinearScaleLevelBar Value="{Binding ElementName=temperatureTrackBar, Path=Value}" />
+                                            </dxga:LinearScale.LevelBars>
+                                            <dxga:LinearScale.CustomLabels>
+                                                <dxga:ScaleCustomLabel
+                                                    Margin="50,0,0,0"
+                                                    Content="Top °C"
+                                                    FontSize="16"
+                                                    Foreground="#FF484E5A"
+                                                    RenderTransformOrigin="0.5,0.5"
+                                                    Offset="-40"
+                                                    Value="-47" />
+                                            </dxga:LinearScale.CustomLabels>
+                                        </dxga:LinearScale>
+
+                                        <!--  Temp 2  -->
+                                        <dxga:LinearScale
+                                            Grid.Column="1"
+                                            Margin="0,15,0,30"
+                                            EndValue="110"
+                                            MajorIntervalCount="12"
+                                            MinorIntervalCount="2"
+                                            StartValue="-10">
+                                            <dxga:LinearScale.Ranges>
+                                                <dxga:LinearScaleRange EndValue="0" StartValue="0%">
+                                                    <dxga:LinearScaleRange.Presentation>
+                                                        <dxga:DefaultLinearScaleRangePresentation Fill="#FF80B9FF" />
+                                                    </dxga:LinearScaleRange.Presentation>
+                                                </dxga:LinearScaleRange>
+                                                <dxga:LinearScaleRange EndValue="100%" StartValue="0" />
+                                            </dxga:LinearScale.Ranges>
+                                            <dxga:LinearScale.LevelBars>
+                                                <dxga:LinearScaleLevelBar Value="{Binding ElementName=temperatureTrackBar, Path=Value}" />
+                                            </dxga:LinearScale.LevelBars>
+                                            <dxga:LinearScale.CustomLabels>
+                                                <dxga:ScaleCustomLabel
+                                                    Margin="50,0,0,0"
+                                                    Content="BaseA °C"
+                                                    FontSize="16"
+                                                    Foreground="#FF484E5A"
+                                                    RenderTransformOrigin="0.5,0.5"
+                                                    Offset="-40"
+                                                    Value="-47" />
+                                            </dxga:LinearScale.CustomLabels>
+                                        </dxga:LinearScale>
+
+                                        <!--  Temp 3  -->
+                                        <dxga:LinearScale
+                                            Grid.Column="2"
+                                            Margin="0,15,0,30"
+                                            EndValue="110"
+                                            MajorIntervalCount="12"
+                                            MinorIntervalCount="2"
+                                            StartValue="-10">
+                                            <dxga:LinearScale.Ranges>
+                                                <dxga:LinearScaleRange EndValue="0" StartValue="0%">
+                                                    <dxga:LinearScaleRange.Presentation>
+                                                        <dxga:DefaultLinearScaleRangePresentation Fill="#FF80B9FF" />
+                                                    </dxga:LinearScaleRange.Presentation>
+                                                </dxga:LinearScaleRange>
+                                                <dxga:LinearScaleRange EndValue="100%" StartValue="0" />
+                                            </dxga:LinearScale.Ranges>
+                                            <dxga:LinearScale.LevelBars>
+                                                <dxga:LinearScaleLevelBar Value="{Binding ElementName=temperatureTrackBar, Path=Value}" />
+                                            </dxga:LinearScale.LevelBars>
+                                            <dxga:LinearScale.CustomLabels>
+                                                <dxga:ScaleCustomLabel
+                                                    Margin="50,0,0,0"
+                                                    Content="BaseB °C"
+                                                    FontSize="16"
+                                                    Foreground="#FF484E5A"
+                                                    RenderTransformOrigin="0.5,0.5"
+                                                    Offset="-40"
+                                                    Value="-47" />
+                                            </dxga:LinearScale.CustomLabels>
+                                        </dxga:LinearScale>
+                                    </dxga:LinearGaugeControl>
+                                </StackPanel>
+                            </Border>
+
+                            <!--  Base Area  -->
+                            <hc:Card.FooterTemplate>
+                                <DataTemplate>
+                                    <StackPanel Margin="10" HorizontalAlignment="Center">
+                                        <TextBlock
+                                            HorizontalAlignment="Left"
+                                            Style="{StaticResource TextBlockLargeBold}"
+                                            Text="{Binding DataContext.Title, RelativeSource={RelativeSource AncestorType=hc:Card}}"
+                                            TextTrimming="CharacterEllipsis"
+                                            TextWrapping="NoWrap" />
+
+                                        <!--  Buttons Area  -->
+                                        <StackPanel
+                                            Margin="0,10,0,0"
+                                            HorizontalAlignment="Center"
+                                            Orientation="Horizontal">
+                                            <Button
+                                                Margin="10"
+                                                Content="View"
+                                                Style="{StaticResource ButtonPrimary}" />
+                                            <Button
+                                                Margin="10"
+                                                Content="Test"
+                                                Style="{StaticResource ButtonPrimary}" />
+                                        </StackPanel>
+
+                                        <!--  Status  -->
+                                        <TextBlock HorizontalAlignment="Center" Text="Status: Demo Info" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </hc:Card.FooterTemplate>
+                        </hc:Card>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </hc:TransitioningContentControl>
+
+    </Grid>
+</UserControl>

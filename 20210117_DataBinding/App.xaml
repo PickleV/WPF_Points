@@ -1,17 +1,18 @@
-﻿<Application x:Class="_20210117_DataBinding.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:_20210117_DataBinding"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             StartupUri="MainWindow.xaml"
-             Startup="Application_Startup">
+﻿<Application
+    x:Class="_20210117_DataBinding.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:_20210117_DataBinding"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    Startup="Application_Startup"
+    StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <!--Background-->
+        <!--  Background  -->
         <LinearGradientBrush x:Key="bgTest">
-            <GradientStop Offset="0" Color="#FFB2B2CD"></GradientStop>
-            <GradientStop Offset="1" Color="#FFDADAAF"></GradientStop>
+            <GradientStop Offset="0" Color="#FFB2B2CD" />
+            <GradientStop Offset="1" Color="#FFDADAAF" />
         </LinearGradientBrush>
-        <!--String-->
+        <!--  String  -->
         <sys:String x:Key="sTest01">This is a value.</sys:String>
         <sys:String x:Key="Public123">Test123</sys:String>
 

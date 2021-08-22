@@ -1,9 +1,8 @@
-﻿<Application x:Class="_20210703_MVVM_Cross.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:_20210703_MVVM_Cross"
-             StartupUri="MainWindow.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
+﻿<Application
+    x:Class="_20210703_MVVM_Cross.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:_20210703_MVVM_Cross"
+    StartupUri="MainWindow.xaml">
+    <Application.Resources />
 </Application>

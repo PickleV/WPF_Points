@@ -1,16 +1,17 @@
-﻿<Application x:Class="_20210628_MVVM_CaliburnMicro.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:_20210628_MVVM_CaliburnMicro">
+﻿<Application
+    x:Class="_20210628_MVVM_CaliburnMicro.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:_20210628_MVVM_CaliburnMicro">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary>
-                    <!--Define a resource name Bootstrapper-->
-                    <local:Bootstrapper x:Key="Bootstrapper"></local:Bootstrapper>
+                    <!--  Define a resource name Bootstrapper  -->
+                    <local:Bootstrapper x:Key="Bootstrapper" />
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
-         
+
     </Application.Resources>
 </Application>

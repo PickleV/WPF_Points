@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:_20210711_SwapWindows"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <Window.DataContext>
+        <local:MainViewModel></local:MainViewModel>
+    </Window.DataContext>
+    <DockPanel>
+        <Button Content="Home" DockPanel.Dock="Top" Command="{Binding HomeCommand}"/>
+        <Button Content="Work" DockPanel.Dock="Top" Command="{Binding WorkCommand}"/>
+
+        <ContentControl Content="{Binding CurrentPage}"></ContentControl>
+    </DockPanel>
 </Window>
